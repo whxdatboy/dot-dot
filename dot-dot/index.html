@@ -15,82 +15,125 @@
 <body>
 
   <main class="main">
-    <form class="main__form form">
-      <ul class="main__form-section section">
-        <li class="section-item">
-          <h2 class="section-title"> <strong class="section-title__number">1</strong> Маршрут</h2>
+    <div class="container">
+      <h1 class="main-title">FTL: Прямая машина</h1>
+      <form class="main__form form">
+        <ul class="main__form-section section">
+          <li class="section-item">
+            <h2 class="section-title"> <span class="section-title__number">1</span> Маршрут</h2>
 
-          <label for="#routeOne" class="section-label">Откуда</label>
-          <input class="section-input" type="text" name="route" id="routeOne" required tabindex="1">
+            <p class="section-label">Откуда</p>
+            <input class="section-input" type="text" name="route" id="routeOne" required tabindex="1">
 
-          <label for="#routeTwo" class="section-label">Куда</label>
-          <input class="section-input" type="text" name="route" id="routeTwo" required tabindex="2">
-        </li>
-        <li class="sections-item">
-          <h2 class="section-title"> <strong class="section-title__number">2</strong> Транспорт</h2>
+            <p class="section-label">Куда</p>
+            <input class="section-input" type="text" name="route" id="routeTwo" required tabindex="2">
+          </li>
+          <li class="sections-item">
+            <h2 class="section-title"> <strong class="section-title__number">2</strong> Транспорт</h2>
 
-          <div class="section-block">
-            <p class="section-label">Грузоподъёмность</p>
-            <select class="section-select" name="transport" id="transportOne" required tabindex="3">
-              <option hidden disabled selected value="Не выбрана">Не выбрана</option>
-              <option value="Вариант 1">Вариант 1</option>
-              <option value="Вариант 2">Вариант 2</option>
-              <option value="Вариант 3">Вариант 3</option>
-              <option value="Вариант 4">Вариант 4</option>
-              <option value="Вариант 5">Вариант 5</option>
-            </select>
-          </div>
-
-          <div class="section-block">
-            <p class="section-label">Способ погрузки</p>
-            <select class="section-select" name="transport" id="transportTwo" required tabindex="4">
-              <option value="Задняя">Задняя</option>
-              <option value="Передняя">Передняя</option>
-              <option value="Боковая">Боковая</option>
-            </select>
-          </div>
-        </li>
-        <li class="sections-item">
-          <h2 class="section-title"> <strong class="section-title__number">3</strong> Груз</h2>
-          <div class="section-block">
-            <p class="section-label">Тип груза</p>
-            <select class="section-select" name="cargoType" required tabindex="5">
-              <option hidden disabled selected value="Не выбран">Не выбран</option>
-              <option value="Опасный груз">Опасный груз</option>
-              <option value="Наливной груз">Наливной груз</option>
-              <option value="Навалочный груз">Навалочный груз</option>
-              <option value="Генеральный груз">Генеральный груз</option>
-            </select>
-          </div>
-
-          <div class="section-block">
-            <p class="section-label">Объявленная ценность, ₽</p>
-            <input class="section-input" type="text" name="cost" id="cost" required tabindex="6">
-            <input class="section-input__temperature" type="checkbox" name="temperature" id="temp">
-            <label for="temp">Требуется температурный режим</label>
-
-            <div class="section-block__optional">
+            <div class="flex">
               <div class="section-block">
-                <p class="section-label">От, °C</p>
-                <input class="section-input" type="text" name="temper" id="minTemp" tabindex="7">
+                <p class="section-label">Грузоподъёмность</p>
+
+                <div class="section-select__wrapper">
+                  <div class="section-select">
+                    <div class="section-select__trigger"><span class="select-option">Не выбрана</span>
+                      <div class="section-select__arrow"></div>
+                    </div>
+                    <div class="section-select__options">
+                      <span class="section-select__option selected" data-value="option1">Вариант 1</span>
+                      <span class="section-select__option" data-value="option2">Вариант 2</span>
+                      <span class="section-select__option" data-value="option3">Вариант 3</span>
+                      <span class="section-select__option" data-value="option4">Вариант 4</span>
+                      <span class="section-select__option" data-value="option5">Вариант 5</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
               <div class="section-block">
-                <p class="section-label">От, °C</p>
-                <input class="section-input" type="text" name="temper" id="maxTemp" tabindex="8">
+                <p class="section-label">Способ погрузки</p>
+
+                <div class="section-select__wrapper">
+                  <div class="section-select">
+                    <div class="section-select__trigger"><span class="select-option">Не выбрана</span>
+                      <div class="section-select__arrow"></div>
+                    </div>
+                    <div class="section-select__options">
+                      <span class="section-select__option selected" data-value="back">Задняя</span>
+                      <span class="section-select__option" data-value="front">Передняя</span>
+                      <span class="section-select__option" data-value="right">Боковая</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
-        </li>
-        <li class="sections-item">
-          <h2 class="section-title"> <strong class="section-title__number">4</strong> Время</h2>
-        </li>
-        <li class="sections-item"></li>
-      </ul>
-    </form>
+
+          </li>
+          <li class="sections-item">
+            <h2 class="section-title"> <strong class="section-title__number">3</strong> Груз</h2>
+            <div class="section-block">
+              <p class="section-label">Тип груза</p>
+              <div class="section-select__wrapper">
+                <div class="section-select">
+                  <div class="section-select__trigger"><span class="select-option">Не выбрана</span>
+                    <div class="section-select__arrow"></div>
+                  </div>
+                  <div class="section-select__options">
+                    <span class="section-select__option selected" data-value="danger">Опасный груз</span>
+                    <span class="section-select__option" data-value="bulk">Наливной груз</span>
+                    <span class="section-select__option" data-value="burn">Горючий груз</span>
+                  </div>
+                </div>
+              </div>
+              </select>
+
+
+
+            </div>
+
+            <div class="section-block">
+              <p class="section-label">Объявленная ценность, ₽</p>
+              <input class="section-input" type="text" name="cost" id="cost" required tabindex="6">
+              <input class="section-input__temperature" type="checkbox" name="temperature" id="temp">
+              <label for="temp">Требуется температурный режим</label>
+
+              <div class="section-block__optional">
+                <div class="section-block">
+                  <p class="section-label">От, °C</p>
+                  <input class="section-input" type="text" name="temper" id="minTemp" tabindex="7">
+                </div>
+                <div class="section-block">
+                  <p class="section-label">До, °C</p>
+                  <input class="section-input" type="text" name="temper" id="maxTemp" tabindex="8">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="sections-item">
+            <h2 class="section-title"> <strong class="section-title__number">4</strong> Время</h2>
+            <p class="section-label">Когда прибыть на точку</p>
+            <ul class="section-adress">
+              <li class="section-adress__item">
+                <input type="checkbox" name="" id="">
+              </li>
+              <li class="section-adress__item"></li>
+            </ul>
+          </li>
+          <li class="sections-item"></li>
+        </ul>
+      </form>
+    </div>
+
+
   </main>
 
 
-  <script src="js/script.min.js"></script>
+
+
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>

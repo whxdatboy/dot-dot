@@ -12,8 +12,8 @@ body {
   margin: 0;
   font-family: "HelveticaNeue", sans-serif;
   font-weight: 400;
-  color: var(--color-dark);
-  background-color: var(--color-white);
+  color: $color-white;
+  background-color: $color-black-gray;
 }
 
 img {
@@ -71,3 +71,9 @@ ul {
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.flex {
+  display: flex;
+}
+
+
