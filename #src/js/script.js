@@ -3,15 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Custom JS
 
   const select = document.querySelectorAll('.section-select'),
-        option = document.querySelectorAll('.section-select__option'),
+        options = document.querySelectorAll('.section-select__option'),
         wrapper = document.querySelectorAll('.section-select__wrapper'),
-        selectOption = document.querySelector('.select-option');
-
-  function openOptions() {
-
-  }
-
-  console.log(select)
+        checkbox = document.querySelector('.section-input__temperature'),
+        temperatureBlock = document.querySelector('.section-block__optional');
 
 
   wrapper.forEach((wrap, i) => {
@@ -20,11 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   })
 
-  option.forEach((item, i) => {
-    item.addEventListener('click', function() {
-      let text = this.innerText;
-      selectOption.innerText = text;
+  options.forEach((option, i) => {
+    option.addEventListener('click', function() {
+      let text = this.innerText,
+          select = this.closest('.section-select'),
+          currentText = select.querySelector('.select-option');
+
+      currentText.innerText = text;
+      select.classList.remove('.open')
     })
+  })
+
+  checkbox.addEventListener('click', function() {
+    if(checkbox.checked) {
+      temperatureBlock.style.display = 'flex';
+    } else {
+      temperatureBlock.style.display = 'none';
+    }
   })
 
 });

@@ -13,6 +13,6 @@
   @import "../scss/parts/mobile";
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) {
   @import "../scss/parts/mobile_xs";
 }
