@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentText.dataset.value = this.dataset.value;
       select.classList.remove('.open');
 
-      if(currentText.dataset.value = "danger") {
-        currentText.classList.add("text-grad");
+      if(currentText.dataset.value != "danger") {
+        currentText.classList.remove("text-grad");
       } else {
-        currentText.classList.remove("text-grad")
+        currentText.classList.add("text-grad")
       }
     })
   })
