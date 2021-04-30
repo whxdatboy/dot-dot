@@ -1,0 +1,62 @@
+.main {
+  .container {
+    width: 100%;
+    min-width: 728px;
+    margin: 0 0 0 170px;
+  }
+
+  &-title {
+    font-size: 3.5em;
+    line-height: 2.25em;
+  }
+
+  .form {
+    .section {
+      &-title {
+        font-size: 1.5em;
+
+        &__number {
+          font-size: 0.7em;
+        }
+      }
+
+      &-item {
+        &:nth-child(2),
+        &:nth-child(3) {
+          max-width: 356px;
+        }
+
+        &:nth-child(3) {
+          .section-select__trigger {
+            width: 100%;
+          }
+        }
+
+        &:not(:nth-child(3)) {
+          .section-select__options {
+            width: 100%;
+          }
+        }
+
+        &:last-child {
+          flex-wrap: wrap;
+        }
+      }
+
+      &-block {
+        max-width: 172px;
+      }
+
+      &-select {
+        &__options {
+          width: max-content;
+        }
+
+        &__option {
+          line-height: 35px;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+}

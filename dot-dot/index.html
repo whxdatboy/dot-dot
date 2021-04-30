@@ -28,7 +28,7 @@
             <p class="section-label">Куда</p>
             <input class="section-input" type="text" name="route" id="routeTwo" required tabindex="2">
           </li>
-          <li class="sections-item">
+          <li class="section-item">
             <h2 class="section-title"> <span class="section-title__number">2</span> Транспорт</h2>
 
             <div class="flex">
@@ -41,7 +41,7 @@
                       <div class="section-select__arrow"></div>
                     </div>
                     <div class="section-select__options">
-                      <span class="section-select__option selected" data-value="option1">Вариант 1</span>
+                      <span class="section-select__option" data-value="option1">Вариант 1</span>
                       <span class="section-select__option" data-value="option2">Вариант 2</span>
                       <span class="section-select__option" data-value="option3">Вариант 3</span>
                       <span class="section-select__option" data-value="option4">Вариант 4</span>
@@ -61,7 +61,7 @@
                       <div class="section-select__arrow"></div>
                     </div>
                     <div class="section-select__options">
-                      <span class="section-select__option selected" data-value="back">Задняя</span>
+                      <span class="section-select__option" data-value="back">Задняя</span>
                       <span class="section-select__option" data-value="front">Передняя</span>
                       <span class="section-select__option" data-value="right">Боковая</span>
                     </div>
@@ -72,7 +72,7 @@
             </div>
 
           </li>
-          <li class="sections-item">
+          <li class="section-item">
             <h2 class="section-title"> <span class="section-title__number">3</span> Груз</h2>
 
             <div class="flex">
@@ -81,11 +81,13 @@
 
                 <div class="section-select__wrapper">
                   <div class="section-select">
-                    <div class="section-select__trigger"><span class="select-option">Не выбрана</span>
+                    <div class="section-select__trigger"><span class="select-option" data-value="none">Не выбрана</span>
                       <div class="section-select__arrow"></div>
                     </div>
                     <div class="section-select__options">
-                      <span class="section-select__option" data-value="danger">Опасный груз</span>
+                      <span class="section-select__option" data-value="danger">Класс 5 — Окисляющие вещества и
+                        органические перекиси
+                      </span>
                       <span class="section-select__option" data-value="bulk">Наливной груз</span>
                       <span class="section-select__option" data-value="burn">Горючий груз</span>
                     </div>
@@ -96,7 +98,7 @@
 
               <div class="section-block">
                 <p class="section-label">Объявленная ценность, ₽</p>
-                <input class="section-input" type="text" name="cost" id="cost" required tabindex="6">
+                <input class="section-input" type="text" name="cost" id="cost" required tabindex="6" placeholder="≥ 1">
               </div>
 
             </div>
@@ -104,7 +106,7 @@
             <div class="flex-column">
 
               <div class="section-checkbox">
-                <input class="section-input__temperature" type="checkbox" name="temperature" id="temp">
+                <input class="checkbox section-input__temperature" type="checkbox" name="temperature" id="temp">
                 <label class="section-input__label" for="temp"> <span class="check"></span>Требуется температурный
                   режим</label>
               </div>
@@ -122,17 +124,37 @@
             </div>
 
           </li>
-          <li class="sections-item">
+          <li class="section-item">
             <h2 class="section-title"> <span class="section-title__number">4</span> Время</h2>
-            <p class="section-label flex"> <span>Когда прибыть на точку</span> <span>700 км в день</span></p>
+            <p class="section-label flex"> <span>Когда прибыть на точку</span> <span class="color-grey">700 км в
+                день</span>
+            </p>
             <ul class="section-adress">
               <li class="section-adress__item">
-                <input type="checkbox" name="" id="">
+
+                <input class="checkbox section-input__time" type="radio" name="time" id="time" checked>
+                <label for="time" class="time-label">
+                  Длинный адрес с градиентом <span class="not-selected">Не выбрано</span>
+                </label>
+
+                <input class="checkbox section-input__time" type="radio" name="time" id="timeTwo">
+                <label for="timeTwo" class="time-label">
+                  Адрес не указан <span class="not-selected">Не выбрано</span>
+                </label>
+
               </li>
-              <li class="section-adress__item"></li>
+              <li class="section-adress__item">
+                <p class="section-label">Комментарий к заказу</p>
+                <textarea class="section-textarea" name="comment" id="comment" cols="41" rows="3"
+                  placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+              </li>
             </ul>
           </li>
-          <li class="sections-item"></li>
+          <li class="section-item">
+            <div class="tooltip">
+              Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+            </div>
+          </li>
         </ul>
       </form>
     </div>

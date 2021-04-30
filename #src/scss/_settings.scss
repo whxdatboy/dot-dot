@@ -13,7 +13,7 @@ body {
   font-family: "HelveticaNeue", sans-serif;
   font-weight: 400;
   color: $color-white;
-  background-color: $color-black-gray;
+  background-color: $color-black-grey;
 }
 
 img {
@@ -79,6 +79,11 @@ ul {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.checkbox {
+  appearance: none;
+  position: absolute;
 }
 
 

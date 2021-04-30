@@ -22,7 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
           currentText = select.querySelector('.select-option');
 
       currentText.innerText = text;
-      select.classList.remove('.open')
+      currentText.dataset.value = this.dataset.value;
+      select.classList.remove('.open');
+
+      if(currentText.dataset.value = "danger") {
+        currentText.classList.add("text-grad");
+      } else {
+        currentText.classList.remove("text-grad")
+      }
     })
   })
 
