@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Custom JS
 
   const select = document.querySelectorAll('.section-select'),
-        options = document.querySelectorAll('.section-select__option'),
-        wrapper = document.querySelectorAll('.section-select__wrapper'),
-        checkbox = document.querySelector('.section-input__temperature'),
-        temperatureBlock = document.querySelector('.section-block__optional');
+    options = document.querySelectorAll('.section-select__option'),
+    wrapper = document.querySelectorAll('.section-select__wrapper'),
+    checkbox = document.querySelector('.section-input__temperature'),
+    temperatureBlock = document.querySelector('.section-block__optional');
 
 
   wrapper.forEach((wrap, i) => {
@@ -16,25 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   options.forEach((option, i) => {
-    option.addEventListener('click', function() {
+    option.addEventListener('click', function () {
       let text = this.innerText,
-          select = this.closest('.section-select'),
-          currentText = select.querySelector('.select-option');
+        select = this.closest('.section-select'),
+        currentText = select.querySelector('.select-option');
 
       currentText.innerText = text;
-      currentText.dataset.value = this.dataset.value;
       select.classList.remove('.open');
-
-      if(currentText.dataset.value != "danger") {
-        currentText.classList.remove("text-grad");
-      } else {
-        currentText.classList.add("text-grad")
-      }
     })
   })
 
-  checkbox.addEventListener('click', function() {
-    if(checkbox.checked) {
+  checkbox.addEventListener('click', function () {
+    if (checkbox.checked) {
       temperatureBlock.style.display = 'flex';
     } else {
       temperatureBlock.style.display = 'none';
